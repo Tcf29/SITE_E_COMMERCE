@@ -1,0 +1,32 @@
+// BARRE DE NAVIGATION 
+const liens=document.querySelectorAll("nav div ul li");
+liens.forEach(lien=>
+{
+ lien.addEventListener("click",()=>
+{
+    liens.forEach(lien1=>{
+      lien1.classList.remove("lien");
+    })
+    lien.classList.add("lien")
+})
+}
+);
+
+
+// MENU BURGER
+const burger=document.querySelector(".fa-bars");
+const menu=document.querySelector("nav .div2");
+burger.addEventListener("click",()=>
+{
+   setTimeout(() => {
+    burger.classList.toggle("transform");
+     menu.classList.toggle("visible");
+   }, 50);
+})
+// FIN MENU BURGER
+// FIN BARRE DE NA VIGATION
+const nav=document.querySelector("nav");
+window.addEventListener("scroll",()=>{
+console.log(nav.offsetHeight);
+console.log("merci");
+});
