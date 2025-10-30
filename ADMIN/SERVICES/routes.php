@@ -1,0 +1,21 @@
+<?php
+$ch="ViewsBackend/dashboard.php";
+if(isset($_GET["ch"])){
+    $ch=$_GET["ch"];
+    $vue="ViewsBackend";
+    if($ch=="DASHBOARD"){
+        $ch="$vue/dashboard.php";
+    }elseif($ch=="PRODUITS"){
+        $ch="$vue/produit.php";
+    }elseif($ch=="COMMANDES"){
+        $ch="$vue/commande.php";
+    }elseif($ch=="UTILISATEURS"){
+        $ch="$vue/utilisateurs.php";
+    }elseif($ch=="boissons"){
+        $ch="boissons.php";
+    }else{
+        $ch="desserts.php";
+    }
+}
+
+?>

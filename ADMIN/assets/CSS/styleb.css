@@ -1,0 +1,265 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BARRE DE NAVIGATION */
+nav{
+    height: 25vh;
+    padding: 10px 0 25px 0;
+}
+ nav img{
+   max-width:115px;
+   max-height: 115px;
+} 
+.onglet{
+    font-weight: bolder;
+    color:white;
+    gap:35px;
+}
+.onglet li{
+    white-space:nowrap;
+}
+.div1{
+  width: 25vw;  
+  padding-left: 30px;
+}
+.div3{
+    width:20vw;
+    cursor: pointer;
+    text-align: right;
+    font-size: 1.5em;
+    padding-right: 30px;
+}
+.div2{
+    width: 50vw; 
+     font-size: 1.5em;                                                                                                          
+}
+.marron{
+    color: #8b4513 !important;
+}
+.marron:hover{
+  background-color: #8B4513 !important;
+  border: 1px solid #8B4513;
+  transform: scale(0.9) translateY(1.5px); 
+  transition: all 1.5s ease-in-out;
+}
+.profil{
+    position:absolute;
+    top:25vh;
+    right:70px;
+    animation: translate 3s;
+    width: 40vw;
+}
+
+/* .disconnect p button a{
+    color: white;
+    text-decoration: none;
+} */
+.lien{
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    text-underline-offset:8px;      
+    text-decoration-style:dashed;   /* permet de determiner le style d'un trait */
+    text-decoration-thickness: 8px; /* permet de determiner la l'epaisseur d'un trait */
+}
+
+@keyframes translate {
+     0%{
+        top:18vh;
+       }    
+}
+
+@media screen and (max-width:1030px) {
+    .onglet{
+       gap:25px;
+    }
+    .div1{
+        padding-left: 15px;
+    }
+    .div2{
+        font-size: 1.3em;
+    }
+    .div3{
+        padding-right: 35px;
+        font-size: 1.2em;
+    }
+    .div1 img{
+        width: 90px;
+        height: 90px;
+    }
+    .lien{
+        text-decoration-thickness: 7px;
+    }                                      
+        }
+@media screen and (max-width:892px){
+    .onglet{
+       gap:15px;
+    }
+    .div1{
+        padding-left: 8px;
+    }
+    .div2{
+        font-size: 1.08em;
+    }
+     .div3{
+        padding-right: 25px;
+        font-size: 1.1em;
+    }
+    .div1 img{
+        width: 82px;
+        height: 82px;
+    }
+    .lien{
+        text-decoration-thickness: 5px;
+    }
+    .profil{
+        width: 50vw;
+    }          
+     
+ }
+  @media screen and (max-width:690px) {
+
+    .onglet{
+       gap:8px;
+    }
+    .div1{
+        padding-left: 4px;
+    }
+    .div2{
+        font-size: 0.9em;
+    }
+     .div3{
+        padding-right: 12px;
+        font-size: 0.9em;
+    }
+    .div1 img{
+        width: 75px;
+        height: 75px;
+    }
+    
+        .profil{
+        width: 60vw;
+    }   
+     .profil h4{
+       font-size: 0.9em;   
+    }
+    .profil p button a{
+         font-size: 0.9em;
+    }                         
+        }
+ @media screen and (max-width:570px) {
+      .div3 div .fa-bars {
+       display: inline-block !important;
+    }
+        .div2{
+        display: none !important;
+        position:absolute;
+        top:25vh;
+        left:0;
+        width: 100%;
+        padding: 0;
+        background-color:rgb(101, 66, 165);
+        padding-top: 0 !important;
+    } 
+    .onglet{
+        flex-direction: column;
+        padding-left: 15px;
+    }
+    .visible{
+        display: inline-block !important;
+    }
+    .burger-active{
+        display: block !important;
+    }
+    .transform:hover{
+    transform: scale(0.8) translate(2px) ;
+    transition: transform 0.1s ease-in-out;
+}
+   nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+   }
+   .div3{
+    padding: 0px 0 25px 0;
+   }
+    .profil{
+        width: 70vw;
+        right: 20px;
+    }  
+     .profil h4{
+       font-size: 0.8em;   
+    }
+    .profil p button a{
+         font-size: 0.8em;
+    }                    
+        
+ }
+@media screen and (max-width:470px){
+    .profil h4{
+       font-size: 0.7em;   
+    }
+    .profil p button a{
+         font-size: 0.7em;
+    }             
+}
+
+ @media screen and (max-width:360px) {
+        .profil{
+            width: 80vw;
+        right:10px;
+    }    
+    .profil h4{
+       font-size: 0.6em;   
+    }
+    .profil p button a{
+         font-size: 0.6em;
+    }             
+    }
+/* FIN BARRE DE NAVIGATION */
+/* MAIN */
+main{
+    position: relative;
+    top:25vh;
+}
+/* FOOTER */
+main .box-container{
+    display: flex;
+    flex-direction: row;
+    gap:14vw;
+}
+
+@media screen and (max-width:1060px) {
+   main .box-container{
+    gap:8vw;
+} 
+}
+@media screen and (max-width:720px){
+    main .box-container{
+    gap:5vw;
+}    
+}
+
+@media screen and (max-width:695px) {
+    main .box-container{
+        flex-direction: column !important;
+        padding-left:30px;
+    }
+}
+/* END FOOTER */
+/* SECTION */
+section{
+    height: 70vh;
+}
+/* FIN SECTION */
+/* END MAIN */

@@ -11,7 +11,7 @@ liens.forEach(lien=>
 })
 }
 );
-
+// FIN BARRE DE NA VIGATION
 
 // MENU BURGER
 const burger=document.querySelector(".fa-bars");
@@ -24,9 +24,8 @@ burger.addEventListener("click",()=>
    }, 50);
 })
 // FIN MENU BURGER
-// FIN BARRE DE NA VIGATION
-const nav=document.querySelector("nav");
-window.addEventListener("scroll",()=>{
-console.log(nav.offsetHeight);
-console.log("merci");
-});
+// const nav=document.querySelector("nav");
+// window.addEventListener("scroll",()=>{
+// console.log(nav.offsetHeight);
+// console.log("merci");
+// });

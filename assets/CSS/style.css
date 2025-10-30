@@ -195,35 +195,34 @@ main{
 
 }
 /* FOOTER */
-footer{
+main footer{
     /* min-height: 20vh; */
-    border: 5px solid magenta;
+    border: 2px solid magenta;
     /* position:relative; */
 }
-.box-container{
+main .box-container{
     display: flex;
     flex-direction: row;
     
-    /* gap:14vw; */
+    gap:14vw;
 }
 
 @media screen and (max-width:1060px) {
 
-   .box-container{
+   main .box-container{
     gap:8vw;
 } 
 }
 @media screen and (max-width:720px){
-    .box-container{
+    main .box-container{
     gap:5vw;
 }    
 }
 
 @media screen and (max-width:695px) {
-    .box-container{
-        flex-direction: column;
-        gap:0;
-        padding: 0;
+    main .box-container{
+        flex-direction: column !important;
+        padding-left:30px;
     }
 }
 /* END FOOTER */
@@ -232,4 +231,68 @@ section{
     height: 70vh;
 }
 /* FIN SECTION */
+
+/* DEBUT INSCRIPTION */
+.row{
+    left:12vw;
+    width: 70%;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+.forme{
+font-size: 1em;
+font-weight: 100;
+background-color: aliceblue;
+}
+.formes{
+    position:relative;
+    left:12%;
+    top:4vh;
+}
+.compte{
+    font-weight: 100;
+}
+.inscription{
+    font-size: 1.7em;
+    padding: 30px 5px 0 5px;
+    font-weight: bolder;
+    text-align: center;
+}
+.inscription1{
+    font-size: 1.3em;
+    padding: 30px 5px 0 5px;
+    font-weight: bolder;
+    text-align: center;
+}
+.connexion1{
+    position: absolute !important;
+    top:32% !important;   
+}
+@media screen and (max-width:992px) {
+ .row{
+    left: 0 !important;
+    width: 100% !important;
+    font-size: 1em;
+}   
+.formes{
+    left:1% !important;
+    top:4vh !important;
+    width: 100% !important;
+}
+.inscription{
+    font-size: 1em;
+}
+.compte{
+    font-size: 0.9em;
+}
+
+}
+@media screen and (max-width:450px) {
+    .form-select{
+        font-size: 0.8em;
+        width: 100%;
+    }
+    
+}
+/* FIN INSCRIPTION */
 /* END MAIN */
