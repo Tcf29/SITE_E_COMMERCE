@@ -261,5 +261,9 @@ main .box-container{
 section{
     height: 70vh;
 }
+/* .table-users::-webkit-scrollbar-track {
+        background: white !important;
+    } */
+
 /* FIN SECTION */
 /* END MAIN */

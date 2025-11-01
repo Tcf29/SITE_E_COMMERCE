@@ -11,10 +11,12 @@ if(isset($_GET["ch"])){
         $ch="$vue/commande.php";
     }elseif($ch=="UTILISATEURS"){
         $ch="$vue/utilisateurs.php";
-    }elseif($ch=="boissons"){
-        $ch="boissons.php";
+    }elseif($ch=="LIVREUR"){
+        $ch="$vue/livreurs.php";
+    }elseif($ch=="CHOIX"){
+         $ch="$vue/choix.php";
     }else{
-        $ch="desserts.php";
+       $ch="$vue/DASHBOARD.php";
     }
 }
 

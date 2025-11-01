@@ -24,8 +24,3 @@ burger.addEventListener("click",()=>
    }, 50);
 })
 // FIN MENU BURGER
-// const nav=document.querySelector("nav");
-// window.addEventListener("scroll",()=>{
-// console.log(nav.offsetHeight);
-// console.log("merci");
-// });

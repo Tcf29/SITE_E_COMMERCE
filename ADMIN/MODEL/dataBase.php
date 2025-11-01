@@ -30,37 +30,38 @@ class Database{
     public function deconnexionBd($pdo){
             $pdo=null;
     }
-    public function saveBd($sql,$params,$transaction=false){
+    public function saveBd($sql,$params,$transaction=null){
 
-        if($transaction==false){
+        if($transaction==null){
         $request=$this->connexionBd();
         $result=$request->prepare($sql);
-        if($params=null){
-            $save=$result->execute();
+          
+        if($params==null){
+            $result->execute();
         }else{
-            $save=$result->execute($params);
+            $result->execute($params);
         }
         $this->deconnexionBd($request);
-      return $save;
+      return $result;
         }else{
             $request=$transaction;
             $result=$request->prepare($sql);
-        if($params=null){
-            $save=$result->execute();
+        if($params==null){
+            $result->execute();
         }else{
-            $save=$result->execute($params);
+            $result->execute($params);
         }
-      return $save;
+          return $result;
         }      
     }
 
     public function getDatas($save,$one=true){
         $datas=null;
         if($one==true){
-            $datas=$save->fech();
+            $datas=$save->fetch();
         }else{
-            $datas=$save->fechAll();
-        }
+            $datas=$save->fetchAll();
+        } 
         return $datas;
     }
     public function beginTransaction(){
@@ -69,7 +70,7 @@ class Database{
         return $transaction;
     }
     public function commit($transaction){
-    $transaction->commmit();
+    $transaction->commit();
     $this->deconnexionBd($transaction);
     }
 

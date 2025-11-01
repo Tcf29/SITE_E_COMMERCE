@@ -56,7 +56,7 @@ $actif="lien";
         </div>
       <!-- </div>  -->
     </nav>
-     <div class="profil border border-1 border-dark pt-2 rounded-4 text-center bg-light z-1">
+     <div class="profil border border-1 border-dark pt-2 rounded-4 text-center bg-light z-1 d-none">
            <h4>JUNIOR</h4>
             <p><button type="button" class="btn btn-lg btn-danger marron "><a href="#" class="nav-link text-white fw-5">DECONNEXION</a></button></p>
             <p><button type="button" class="btn btn-lg btn-warning marron "><a href="#" class="nav-link text-white fw-5">INFORMATIONS COMPTE</a></button></p>
