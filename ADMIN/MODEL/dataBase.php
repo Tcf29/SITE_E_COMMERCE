@@ -35,7 +35,6 @@ class Database{
         if($transaction==null){
         $request=$this->connexionBd();
         $result=$request->prepare($sql);
-          
         if($params==null){
             $result->execute();
         }else{
@@ -46,16 +45,19 @@ class Database{
         }else{
             $request=$transaction;
             $result=$request->prepare($sql);
+            
         if($params==null){
             $result->execute();
         }else{
             $result->execute($params);
+
         }
           return $result;
         }      
     }
 
     public function getDatas($save,$one=true){
+//  die(json_encode($save->fetchAll()));
         $datas=null;
         if($one==true){
             $datas=$save->fetch();

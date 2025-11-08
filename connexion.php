@@ -1,4 +1,5 @@
 <?php
+session_start();
 $actif="d-none";
 ?>
 <!DOCTYPE html>
@@ -13,10 +14,10 @@ $actif="d-none";
     <script src="assets/JS/bootstrap.bundle.min.js" defer></script>
 </head>
 <body class="forme">
-    <button class="btn btn-sm btn-dark btn-outline-primary text-white"><a href="#" class="text-white"><i class="fas fa-angle-left"> Retour</i></a></button>
-   <div class="alert alert-danger alert-dismissible <?php if(isset($_GET["active"])){
+    <button class="btn btn-sm btn-dark btn-outline-primary text-white"><a href="pagePrincipaleFronted.php" class="text-white"><i class="fas fa-angle-left"> Retour</i></a></button>
+   <div class="alert alert-danger bg-danger m-0 alert-dismissible <?php if(isset($_GET["active"])){
                  if ($_GET["active"]=="alert_danger"){ $actif="";}else{ $actif="d-none";} } echo $actif; ?>">
-      <p class="text-white fw-5 h5 text-center"> Les informations entrées sont incorrects.veuiller entrer les bonnes s'il vous plait.</p>
+      <p class="text-white fw-5 h5 text-center"> <?= $_SESSION["message"]?></p>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
     </div>
   
@@ -38,7 +39,7 @@ $actif="d-none";
                 <button class="btn btn-lg btn-outline-success text-info w-50 forme">Se Connecter</button>
             </div>
             <div class="text-info text-center">
-                <p class="compte">vous n'êtes pas encore inscrit? <a href="#" class="text-success">S'inscrire</a></p>
+                <p class="compte">vous n'êtes pas encore inscrit? <a href="inscription.php" class="text-success">S'inscrire</a></p>
                 <p class="compte">Retrouver nous sur <br />
                 <a href="https://www.google.com"><i class="fa-brands fa- fa-google"></i></a>   
                 <a href="https://www.facebook.com"><i class="fa-brands fa- fa-facebook"></i></a>      
@@ -49,7 +50,7 @@ $actif="d-none";
         </form>
     </div>
     <script>
-        const nav=document.querySelector(".alert");
+    const nav=document.querySelector(".alert");
 document.addEventListener("scroll",()=>{
 nav.classList.add("d-none");
 });

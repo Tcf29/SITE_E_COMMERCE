@@ -15,7 +15,13 @@ if(isset($_GET["ch"])){
         $ch="$vue/livreurs.php";
     }elseif($ch=="CHOIX"){
          $ch="$vue/choix.php";
-    }else{
+    }elseif($ch=="STOCKS"){
+        $ch="$vue/stock.php";
+    }elseif($ch=="FORMULAIRE_CREATION_PRODUIT"){
+           $ch="$vue/formulaireCreationProduit.php";
+    }elseif($ch="FORMULAIRE_CREATION_USER"){
+        $ch="$vue/formulaire-connex.php";
+    }else {
        $ch="$vue/DASHBOARD.php";
     }
 }

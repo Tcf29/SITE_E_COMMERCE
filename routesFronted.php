@@ -1,0 +1,29 @@
+<?php
+$dossier="ViewsFronted";
+$routesFront=array(
+    "ACCUEIL"=>"$dossier/home.php",
+    "CATALOGUE1"=>"$dossier/catalogue1.php",
+    "CATALOGUE2"=>"$dossier/catalogue2.php",
+    "CATALOGUE3"=>"$dossier/catalogue3.php",
+    "CATALOGUE4"=>"$dossier/catalogue4.php",
+    "FORMUPDATE"=>"$dossier/formulaireUpdate.php",
+    "A_PROPOS"=>"$dossier/propos.php",
+    "CONTACT"=>"$dossier/contact.php",
+    "RESEARCH"=>"$dossier/research.php",
+    "VISUALIASTION"=>"$dossier/visualisationProduit.php",
+    "PANIER"=>"$dossier/panier.php",
+    "COMMANDECLIENT"=>"$dossier/commandeClient.php",
+    "INFOSLIVRAISON"=>"$dossier/infos_livraison.php"
+);
+$chf="$dossier/home.php";
+if(isset($_GET["chf"])==true){
+    $route=$_GET["chf"];
+    if(array_key_exists($route,$routesFront)){
+        $chf=$routesFront["$route"];
+    }else{
+        $chf="$dossier/404.php";
+    }
+}else{
+    $chf="$dossier/home.php";
+}
+?>

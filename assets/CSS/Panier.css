@@ -1,0 +1,57 @@
+/* debut style du panier */
+#products-shopping-cart section {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    width: 100%;
+    background: #e7e4db;
+}
+#products-shopping-cart h3 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#products-shopping-cart div.box-container{
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 80%;;
+}
+
+#products-shopping-cart div.wishlist-total p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#products-shopping-cart div.wishlist-total a {
+    display: block;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 80%;
+}
+
+#products-shopping-cart div.wishlist-total a.option-btn {
+    background-color: #ff0080;
+}
+
+#products-shopping-cart div.wishlist-total a.delete-btn {
+    background-color: #0080ff;
+}
+#products-shopping-cart div.wishlist-total a.btn-disabled {
+    background-color: #ff8080;
+}
+/* fin style du panier */

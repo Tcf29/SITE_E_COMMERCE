@@ -1,20 +1,19 @@
 *{
     padding:0;
     margin: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 };
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
-    /* scrollbar-color: blue;
-    scrollbar-width: thin; */
 };
 /* BARRE DE NAVIGATION */
 
-.azerty{
-    min-height: 500px;
+nav{
+    height: 25vh;
+    padding: 10px 0 25px 0;
 }
-body nav img{
+nav .div1 img{
    max-width:100px;
    max-height: 100px;
 } 
@@ -25,13 +24,6 @@ body nav img{
 .onglet li{
     white-space:nowrap;
 }
-/* .onglet li ul li a{
-    font-weight: bolder;
-} */
-/* .sous-lien{
-    text-decoration: none;
-    color: black;
-} */
 .shop{
     position: relative;
 }
@@ -40,9 +32,8 @@ body nav img{
     height: 25px;
     width: 25px;
     position: absolute;
-    top:-20px;
-    right:-15px;
-    /* background-color: goldenrod; */
+    top:-5px;
+    right:-13px;
     border-radius: 50%;
     font-size: 0.5em;
     padding:12px 1px;
@@ -51,15 +42,18 @@ body nav img{
     text-align: center;
 }
 .div1{
-  width: 15vw;  
+  width: 15vw; 
 }
 .div3{
-    width: 10vw;
-    cursor: pointer;
+    width: 27vw;
+    cursor: pointer; 
+    box-sizing: border-box;
 }
 .div2{
-    width: 65vw;                                                                                                             
+    width: 55vw;                                                                                                            
 }
+
+/* profil */
 .marron{
     color: #8b4513 !important;
 }
@@ -71,10 +65,16 @@ body nav img{
 }
 .profil,.disconnect{
     position:absolute;
-    top:23vh;
-    right:70px;
+    top:25vh;
+    right:60px;
     animation: translate 3s;
-    width: 30vw;
+    width: 40vw !important;
+}
+.fa-user-color{
+    transform: scale(0.85) translateY(-1px) !important;
+}
+.fa-shopping-cart:hover,.fa-search:hover{
+    transform: scale(1.1) translateY(2px) !important; 
 }
 .disconnect h5{
     word-wrap: break-word;
@@ -93,7 +93,7 @@ body nav img{
 
 @keyframes translate {
      0%{
-        top:20vh;
+        top:22vh;
      }    
 }
 
@@ -101,11 +101,9 @@ body nav img{
      .div2{
         display: none !important;
         position:absolute;
-        top:22vh;
+        top:16vh;
         left:0;
-        width: 100%;
-        padding: 0;
-        
+        width: 100%;    
     }
     .visible{
         display: inline-block !important;
@@ -123,67 +121,59 @@ body nav img{
         background-color: gainsboro;
         border-radius:6px;
         padding-bottom: 17px;
+        padding-left: 10px;
     }
     .div1{
         width: 60vw;
     }
     .div3{
-        width: 30vw;
-        padding-left: 5vw;
+        width: 35vw;
+        padding-left: 7vw;
     }
     .div3 div {
         justify-content: flex-end;
         /* gap:2px !important; */
     } 
-    nav img{
-        width: 120px;
-        height: 120px;
-    } 
     .div3 div .fa-bars {
        display: inline-block !important;
     }  
     .profil,.disconnect{
-        width: 40vw;
-         top:25vh;
+        width: 60vw !important;
     }                                                
         } 
-        @media screen and (max-width:680px) {
+ @media screen and (max-width:680px) {
         .profil,.disconnect{
         width: 70vw;
-         top:30vh;
-    }                 
-            
+    }   
+    .div1{
+        width: 52vw;
+    }
+    .div3{
+        width: 42vw;
+    }     
         }
 @media screen and (max-width:470px){
-    nav img{
-        width: 90px;
-        height: 90px;
-    }
     .div3 div{
         gap:25px !important;
     }
-    .div2{
-        display: none !important;
-        position:absolute;
-        top:22vh;
-        left:0;
-        width: 100%;
-        padding: 0;
-    }
     .profil,.disconnect{
-        width:70vw !important;
+        width:90vw !important;
+        right:8px !important;
     }
+
+     .div1{
+        width: 45vw;
+    }
+    .div3{
+        width: 47vw;
+        margin-top:5px !important;
+    }     
 }
 
  @media screen and (max-width:360px) {
-        nav img{
-           width: 80px;
-           height: 80px;
-        }
-        .profil,.disconnect{
+    .profil,.disconnect{
         width: 90vw !important;
-        top:22vh !important;
-        right:5px;
+        right:5px !important;
     }                 
     }
 /* FIN BARRE DE NAVIGATION */
@@ -191,13 +181,14 @@ body nav img{
 main{
     position: relative;
     top:25vh;
-    border:2px solid green;
+    border:1px solid green;
 
 }
 /* FOOTER */
 main footer{
-    /* min-height: 20vh; */
-    border: 2px solid magenta;
+    padding:15px 0 30px 0;
+    min-height: 22vh;
+    /* border: 2px solid magenta; */
     /* position:relative; */
 }
 main .box-container{
@@ -226,12 +217,6 @@ main .box-container{
     }
 }
 /* END FOOTER */
-/* SECTION */
-section{
-    height: 70vh;
-}
-/* FIN SECTION */
-
 /* DEBUT INSCRIPTION */
 .row{
     left:12vw;

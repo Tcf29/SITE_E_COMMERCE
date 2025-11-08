@@ -1,6 +1,8 @@
 <?php
+session_start();
 require_once "SERVICES/routes.php";
 $actif="lien";
+$active1="d-none";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,6 +18,19 @@ $actif="lien";
 
 </head>
 <body>
+
+<div class="alert alert-success m-0 alert-dismissible 
+    <?php if(isset($_GET["active"])){
+                 if ($_GET["active"]=="alert_success"){ $active1="";}else{ $active1="d-none";} } echo $active1;?>">
+      <p class="text-white fw-5 h5 m-0 text-center"><?php echo $_SESSION["message"] ?></p>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible <?php if(isset($_GET["active"])){
+                 if ($_GET["active"]=="alert_danger"){ $active1="";}else{ $active1="d-none";} } echo $active1; ?>">
+      <p class="text-white fw-5 h5 text-center"><?php echo $_SESSION["message"] ?></p>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
+
     <!-- barre de navigation -->
     <nav class="w-100 border border-dark position-fixed z-1 bg-primary">
         <div class="d-inline-block div1"><img src="../assets/IMAGE/LOGO.png" alt="LOGO">
@@ -33,6 +48,12 @@ $actif="lien";
                 <?php  if(isset($_GET["ch"])){
                  if ($_GET["ch"]=="PRODUITS"){ $actif="lien";}else{ $actif=" ";} echo $actif;} ?>
                 "><a href="index.php?ch=PRODUITS" class="nav-link">PRODUITS</a>
+                </li>
+
+                <li class="list-inline-item
+                <?php  if(isset($_GET["ch"])){
+                 if ($_GET["ch"]=="STOCKS"){ $actif="lien";}else{ $actif=" ";} echo $actif;} ?>
+                "><a href="index.php?ch=STOCKS" class="nav-link">STOCKS</a>
                 </li>
 
                 <li class="list-inline-item

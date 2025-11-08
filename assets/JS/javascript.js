@@ -24,3 +24,22 @@ burger.addEventListener("click",()=>
    }, 50);
 })
 // FIN MENU BURGER
+
+// SESSION PROFIL
+let profil=document.querySelector(".profil1");
+let user=document.querySelector(".fa-user");
+user.addEventListener("click",()=>
+{
+   profil.classList.toggle("d-none");
+   user.classList.toggle("fa-user-color");
+});
+
+// let shopping=document.querySelector(".fa-shopping-cart");
+// let research=document.querySelector(".fa-search");
+// let table=[shopping,research];
+// table.forEach(element=>{
+//   element.addEventListener('over',()=>{
+//     element.classList.toggle("fa-user-color-special");
+//   })
+// })
+// FIN SESSION PROFIL

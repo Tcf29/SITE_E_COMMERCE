@@ -13,7 +13,7 @@ $all_users=$datas;
 ?>
     <div class="py-3 d-flex justify-content-between px-2 align-items-center">
         <h6 class="d-inline-block text-success">LISTES DES UTILISATEURS</h6>
-        <button class="btn btn-outline-success  d-inline-block w-50">Ajouter un utilisateur</button>
+        <button class="btn btn-outline-success  d-inline-block w-50"><a href="index.php?ch=FORMULAIRE_CREATION_USER" class="nav-link">Ajouter un utilisateur</a></button>
     </div>
 <div class="table-responsive fs-sm-2">
      <table class="table table-striped fs-6">

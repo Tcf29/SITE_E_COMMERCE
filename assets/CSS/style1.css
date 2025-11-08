@@ -1,0 +1,453 @@
+/* Responsive additions (to be appended) */
+
+/* Large desktops */
+@media (max-width:1200px) {
+    .carousel-item img { height: 650px; }
+    .carousel-item h1 { font-size: 48px; top:18%; }
+    .carousel-item h2 { font-size: 30px; top:62%; left:45%; }
+    .promo-card, .new-card { width: 320px; height: auto; }
+    .card { width: 220px; }
+    #zone-infos { padding: 32px; }
+}
+
+/* Medium screens / tablets */
+@media (max-width:992px) {
+    .carousel-item img { height: 520px; }
+    .carousel-item h1 { font-size: 40px; top:17%; }
+    .carousel-item h2 { font-size: 26px; top:60%; left:45%; }
+    .bloc-infos { flex: 1 1 calc(50% - 16px); padding: 24px; }
+    .cards { gap: 20px; }
+    .section-card, .promo-section, .new-section { padding: 16px; }
+    .Informatique { height: auto; margin-top: -60px; background-position: center; }
+    .tv-audio{height: auto; margin-top: -60px; background-position: center; }
+    .phone-acc{ height: auto; margin-top: -60px; background-position: center; }
+    .electromenager{ height: auto; margin-top: -60px; background-position:center  ;}
+}
+
+/* Small tablets / large phones */
+@media screen and (max-width:768px) {
+    /* main { top: 20vh; } */
+    .carousel-item img { height: 420px; }
+    .carousel-item h1 { font-size: 34px; left:50%; top:18%; transform: translate(-50%,-50%); padding:8px 16px; }
+    .carousel-item h2 { font-size: 22px; left:50%; top:62%; transform: translate(-50%,-50%); padding:6px 14px; }
+    .bloc-infos { flex: 1 1 100%; margin-bottom: 12px; }
+    .promo-card, .new-card, .card { width: calc(50% - 12px); height: auto; }
+    .cards { justify-content: center; }
+    .promo-card img, .new-card img, .card img { height: 220px; }
+    .shop span { top:-14px; right:-10px; height:22px; width:22px; padding:8px 0; font-size:0.6em; }
+}
+
+/* Phones */
+@media (max-width:576px) {
+    .carousel-item img { height: 320px; }
+    .carousel-item h1 { 
+    font-size: 26px;
+    top:16%; 
+    padding:6px 12px; 
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+    .carousel-item h2 { font-size: 18px; top:60%; padding:5px 10px; }
+    .promo-card, .new-card, .card { width: 100%; margin-bottom:16px; }
+    .cards { gap: 14px; flex-direction: column; align-items: stretch; }
+    #zone-infos { padding: 18px; }
+    .bloc-infos h1 { font-size: 20px; }
+    .bloc-infos p { font-size: 16px; }
+    .card .btn { width: 120px; margin-left: calc(50% - 60px); }
+    .fleche { margin-top: 120px; height:56px; width:56px; font-size:26px; padding:10px; }
+}
+
+/* Very small phones */
+@media (max-width:420px) {
+    .carousel-item img { height: 260px; }
+    .carousel-item h1 { font-size: 2px; }
+    .carousel-item h2 { font-size: 16px; }
+    .promo-card img, .new-card img, .card img { height: 180px; }
+    .promo-card, .new-card, .card { padding: 12px; border-radius: 6px; }
+    .bloc-infos { padding: 18px 12px; }
+    .shop span { top:-12px; right:-8px; height:20px; width:20px; padding:6px 0; font-size:0.55em; }
+}
+
+/* Extra small */
+@media (max-width:360px) {
+    .carousel-item img { height: 220px; }
+    .carousel-item h1 { font-size: 20px; top:15%; }
+    .carousel-item h2 { font-size: 14px; top:58%; }
+    .promo-card h5, .new-card h5, .card h5 { font-size: 16px; }
+    .bloc-infos h1 { font-size: 18px; }
+    .bloc-infos p { font-size: 15px; }
+    .Informatique { margin-top: -40px; background-position: center; }
+     .tv-audio{ margin-top: -40px; background-position: center; }
+     .phone-acc{ margin-top: -40px; background-position: center; }
+     .electromenager{ margin-top: -40px; background-position: center; }
+}
+
+/* Utility tweaks to ensure smooth resizing */
+.promo-card, .new-card, .card, .bloc-infos {
+    box-sizing: border-box;
+    min-width: 0; /* prevent overflow in flex children */
+}
+
+/* CORPS DU SITE  */
+
+/* texte du carousel */
+.carousel-item h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.carousel-item h2{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* taille des images du carousel */
+ .carousel-item img {
+    object-fit: cover;
+    height: 800px; /* Adjust height as needed */
+}
+
+#carouselExample {
+    margin-top: -100px; /* Adjust this value based on your navbar height */
+}
+
+
+/* blocks d'infos statique du site
+/* Conteneur principal */
+#zone-infos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+/* Boîte individuelle */
+.bloc-infos{
+  flex: 1 1 calc(50% - 20px);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.bloc-infos:hover {
+  transform: translateY(-5px);
+  background-color: #f0eaea;
+}
+
+/* Icône */
+.bloc-infos i{
+  font-size: 40px;
+  color: #0078D7; /* Couleur principale du site */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.bloc-infos:hover i{
+  color: #db6605; /* Couleur au survol */
+}
+
+/* Titre */
+.bloc-infos h1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Paragraphe */
+.bloc-infos p{
+  font-size: 20px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bloc-infos{
+    flex: 1 1 100%;
+  }
+} 
+
+/* style de la section promotionnelle  */
+.promo-section {
+     background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* style des cartes de la section promotionnelle */
+.promo-card {
+     width: 250px;
+    padding: 15px;
+    height: 450px;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);       
+}
+
+/* images des cartes de la section promotionnelle  */
+.promo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+     border-radius: 5px;
+}
+
+.promo-card h5 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* ancien prix barré  */
+.old-price {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+/* nouveau prix en rouge  */
+.new-price {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* style de la section nouveautés */
+.new-section {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* cartes de la section nouveautés */
+.new-card {
+     width: 250px;
+    padding: 15px;
+    height: 450px;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);       
+}
+
+/* images des cartes de la section nouveautés */
+.new-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+     border-radius: 5px;
+     padding-top: 35px;
+}
+
+/* lien a sans style  */
+.new-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.promo-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.new-card h5 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* icone new  */
+.new-card h6 {
+    position: absolute;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* FIN SECTION */
+/* END MAIN */
+
+/* styles du catalogue informatique  */
+.top-50-1{
+    top: 30% !important;
+    /* left:10% !important; */
+}
+.Informatique{
+    height: 700px;
+    border: 2px solid blue;
+    margin-top: -100px;
+    background-image: url('../IMAGE/bg.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+}
+
+/* style du catalogue tv et audio  */
+.tv-audio{
+    height: 700px;
+    border: 2px solid blue;
+    margin-top: -100px;
+    background-image: url('../IMAGE/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* style du catalogue telephone et accessoires  */
+.phone-acc{
+    height: 700px;
+    border: 2px solid blue;
+    margin-top: -100px;
+    background-image: url('../IMAGE/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* style du catalogue electromenager   */
+.electromenager{
+    height: 700px;
+    border: 2px solid blue;
+    margin-top: -100px;
+    background-image: url('../IMAGE/image4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* bouton fleche du background du catalogue informatique  */
+ .fleche{
+    margin-top:200px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: #f0eaea;
+    color: #8b4513;
+    height: 70px;
+    width: 70px;
+    padding: 15px 20px;
+}
+
+/* grille des produits du catalogue informatique  */
+.section-card{
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* espacement entre les cartes   */
+.cards{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* cartes des produits du catalogue informatique  */
+.card {
+    width: 250px;
+    padding: 15px;
+    min-height: 450px;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);       
+}
+   
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+     border-radius: 5px;
+     padding-top: 20px;
+}
+
+.card h5 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* boutons des cartes des produits du catalogue informatique   */
+ .card .btn{
+    margin-top: 15px;
+    background-color: #8b4513;
+    border: none;
+    width: 180px;
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+/* bouton ajouter au panier au survol  */
+.card .btn:hover{
+    background-color: #311204;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* cartes au survol  */
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #f0eaea;
+}
+
+
+
+
+/* formulaire de connexion et d'inscription   */
+.form-container {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+    .form-title {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: bold;
+      color: #333;
+    }
+    .form-check-label {
+      margin-left: 5px;
+    }

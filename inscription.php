@@ -14,7 +14,7 @@ $actif="d-none";
     <script src="assets/JS/bootstrap.bundle.min.js" defer></script>
 </head>
 <body class="forme">
-    <button class="btn btn-sm btn-dark btn-outline-primary text-white"><a href="#" class="text-white"><i class="fas fa-angle-left"> Retour</i></a></button>
+    <button class="btn btn-sm btn-dark btn-outline-primary text-white"><a href="pagePrincipaleFronted.php" class="text-white"><i class="fas fa-angle-left"> Retour</i></a></button>
     <div class="alert alert-success alert-dismissible 
     <?php if(isset($_GET["active"])){
                  if ($_GET["active"]=="alert_success"){ $actif="";}else{ $actif="d-none";} } echo $actif;?>">
@@ -58,12 +58,12 @@ $actif="d-none";
             </div>
         </form>
     </div>
-    <script>
+    <script type="text/javascript">
         const nav=document.querySelector(".alert");
-document.addEventListener("scroll",()=>{
-nav.classList.add("d-none");
-});
-    </script>
+         document.addEventListener("scroll",()=>{
+         nav.classList.add("d-none");
+         });
+       </script>
 </body>
 </html>
     <!-- <i class="fa-classic fa-solid fa-user position-absolute top-50"></i> -->

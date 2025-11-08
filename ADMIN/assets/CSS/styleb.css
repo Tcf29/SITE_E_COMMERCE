@@ -267,3 +267,17 @@ section{
 
 /* FIN SECTION */
 /* END MAIN */
+/* FORM CREATE */
+.form-container-user{
+ background-color: #f5f6fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 50vh;
+      padding: 30px 10px;
+}
+.form-container-user button {
+      width: 48%;
+    }
+/* END CREATE */

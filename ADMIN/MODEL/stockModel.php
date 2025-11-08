@@ -49,7 +49,18 @@ class Stock{
         }else{
         $this->bd->saveBd($sql,$params,$pdo);
         }
-        $datas=$this->bd->saveBd()
+        $datas=$this->bd->getDatas($saveBd,false);
+        return $datas;
     }
+
+     public function verifyDisponibiliteStock($id_produit,$quantite){
+  $stockBd=$this->readStock($id_produit);
+  $verify=false;
+  if((int)$stockBd->stock_disponible >= $quantite){
+    $verify=true;
+  }
+  return $verify;
+    }
+
 }
 ?>
